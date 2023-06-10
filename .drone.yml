@@ -13,4 +13,4 @@ steps:
       - cd test-drone
       - git pull
 
-branches: master
+branches: main
