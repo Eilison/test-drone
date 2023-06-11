@@ -33,9 +33,9 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
       - promote
 
 volumes: # 定义流水线挂载目录，用于共享数据
-  - name: maven-build
-    host:
-      path: /root/drone/docker/maven/build # 从宿主机中挂载的目录
-  - name: maven-cache
-    host:
-      path: /root/drone/docker/maven/cache
+- name: maven-build
+  host:
+    path: /root/drone/docker/maven/build # 从宿主机中挂载的目录
+- name: maven-cache
+  host:
+    path: /root/drone/docker/maven/cache
