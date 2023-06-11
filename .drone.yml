@@ -7,9 +7,9 @@ platform:
   arch: amd64
 
 steps:
-- name: deployment1
-  commands:
-    - echo "hello"
-  when:
-    branch:
-      - main
+  - name: deployment1
+    commands:
+      - echo "hello"
+    when:
+      branch:
+        - main
