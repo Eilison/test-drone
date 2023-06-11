@@ -10,5 +10,6 @@ steps:
 - name: deployment1
   commands:
     - echo "hello"
-
-branches: main
+  when:
+    branch:
+      - main
