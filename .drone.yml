@@ -7,8 +7,8 @@ platform:
   arch: amd64
 
 steps:
-  - name: deployment1
-    commands:
-      - echo "hello"
+ - name: deployment1
+  commands:
+    - echo "hello"
 
 branches: main
