@@ -7,7 +7,7 @@ platform:
   arch: amd64
 
 steps:
- - name: deployment1
+- name: deployment1
   commands:
     - echo "hello"
 
