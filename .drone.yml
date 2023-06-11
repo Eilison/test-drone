@@ -9,8 +9,6 @@ platform:
 steps:
   - name: deployment1
     commands:
-      - git clone https://github.com/Eilison/test-drone.git
-      - cd test-drone
-      - git pull
+      - echo "hello"
 
 branches: main
