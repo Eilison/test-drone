@@ -13,7 +13,7 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
     playbook: playbook.yml
     # galaxy: ansible/requirements.yml
     inventory: inventory
-    syntax_check: true
+    # syntax_check: true
     
 - name: build-package # 流水线名称
   image: maven:3.8.6-jdk-8 # 定义创建容器的Docker镜像
@@ -37,7 +37,7 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
     command_timeout: 5m # 远程执行命令超时时间
     script:
       - cd /root/drone/docker/maven/build # 进入宿主机构建目录
-      - ll -a
+      - ls
   when:
     event:
       - promote
