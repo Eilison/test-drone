@@ -3,8 +3,20 @@
 - name: Echo
   hosts: 127.0.0.1
   connection: local
+  become: true
 
   tasks:
   - name: Print debug message
     debug:
       msg: Hello, world!
+  - name: move jar
+    copy: src=/root/drone/docker/maven/build/demo-0.0.1.jar dest=/www/demo-0.0.1.jar
+  - name: get pid of process
+    tags:
+     - test
+    shell: "ll /www/demo*"
+    register: jarname
+  - name: Print debug message
+    debug:
+      msg: {{jarname}}
+  
