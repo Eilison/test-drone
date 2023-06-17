@@ -18,5 +18,5 @@
     register: jarname
   - name: Print debug message
     debug:
-      msg: {{jarname}}
+      msg: "{{jarname}}"
   
