@@ -11,7 +11,7 @@
     debug:
       msg: Hello, world!
   - name: move jar
-    copy: src=/root/drone/docker/maven/build/demo-0.0.1.jar dest=/www/demo-0.0.1.jar
+    copy: src=/app/build/demo-0.0.1.jar dest=/www/demo-0.0.1.jar
   - name: get pid of process
     tags:
      - test
@@ -20,4 +20,3 @@
   - name: Print debug message
     debug:
       msg: "{{jarname}}"
-  
