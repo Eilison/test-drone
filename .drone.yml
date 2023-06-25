@@ -11,6 +11,8 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
   settings:
     become: true
     playbook: playbook.yml
+    private_key:
+      from_secret:  ssh_password
     # galaxy: ansible/requirements.yml
     inventory: inventory
     # syntax_check: true
