@@ -15,7 +15,7 @@
   - name: get pid of process
     tags:
      - test
-    shell: "ll /www/demo*"
+    shell: "ls -l /www/demo*"
     register: jarname
   - name: Print debug message
     debug:
