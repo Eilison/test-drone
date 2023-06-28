@@ -4,6 +4,9 @@ name: jar-deploy # 定义流水线名称
 #node:
 #  name: drone-runner-sczz
 
+clone:
+  retries: 3
+
 steps: # 定义流水线执行步骤，这些步骤将顺序执行
 
 - name: build-package # 流水线名称
