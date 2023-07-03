@@ -7,11 +7,11 @@
   become: true
 
   tasks:
-  - name: Print debug message
+  - name: start deploy
     debug:
-      msg: Hello, world!
+      msg: start deploy!
   - name: move jar
-    copy: src=/app/build/demo-0.0.1.jar dest=/www/demo-0.0.1.jar backup=yes
+    copy: src=/app/build/${jarname}-0.0.1.jar dest=/www/${jarname}-0.0.1.jar backup=yes
   - name: get pid of process
     tags:
      - test
@@ -20,3 +20,6 @@
   - name: Print debug message
     debug:
       msg: "{{jarname}}"
+  - name: finish deploy
+    debug:
+      msg: finish deploy!
