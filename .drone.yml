@@ -29,6 +29,8 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
       from_secret:  ssh_password
     # galaxy: ansible/requirements.yml
     inventory: inventory
+    extra_vars:
+      filname: ${jarname=demo}
     # syntax_check: true
   volumes: # 将容器内目录挂载到宿主机，仓库需要开启Trusted设置
     - name: maven-build
