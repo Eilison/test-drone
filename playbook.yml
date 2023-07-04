@@ -18,10 +18,14 @@
     shell: "ls -l /www/demo*"
     register: jarpath
   - name: Print debug message
-    shell: sh /www/startdemo.sh
-  - name: execute sh
     debug:
       msg: "{{jarpath}}"
+  - name: execute sh
+    shell: sh /www/startdemo.sh
+    register: execute
+  - name: Print debug message
+    debug:
+      msg: "{{execute}}"
   - name: finish deploy
     debug:
       msg: finish deploy!
