@@ -18,7 +18,7 @@
     shell: "ls -l /www/demo*"
     register: jarpath
   - name: Print debug message
-    shell: /www/startdemo.sh
+    shell: sh /www/startdemo.sh
   - name: execute sh
     debug:
       msg: "{{jarpath}}"
